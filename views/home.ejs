@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <% if (success && success.length > 0) { %>
+    <div class="alert alert-success" role="alert" align="left" nonce="q60T5VzFcszmG3L8yMAuZL">
+        <%= success %>
+    </div>
+    <% } %>
+    <h2>Home</h2>
+    <form method="POST" action="fileUpload/" enctype="multipart/form-data">
+        <input type="file" placeholder="upload photo" name="photo">
+        <input type="submit">
+    </form>
+    <script>
+        const alert = document.querySelector('.alert')
+        if (alert) {
+            setTimeout(() => {
+                alert.parentNode ? alert.parentNode.removeChild(alert) : null;
+            }, 5000)
+        }
+    </script>
+</body>
+
+</html>
